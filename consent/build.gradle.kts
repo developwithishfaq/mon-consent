@@ -53,8 +53,8 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.developwithishfaq"
-                artifactId = "consent"
-                version = "2.1.3"
+                artifactId = "consentt"
+                version = "4.0.0"
             }
         }
     }

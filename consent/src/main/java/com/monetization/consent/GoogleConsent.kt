@@ -8,7 +8,6 @@ import android.util.Log
 import com.google.android.ump.ConsentDebugSettings
 import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
-import com.monetization.core.commons.AdsCommons.isDebugMode
 import java.util.concurrent.atomic.AtomicBoolean
 
 
@@ -20,11 +19,7 @@ class GoogleConsent(
     private var consentInformation = UserMessagingPlatform.getConsentInformation(context)
 
     val canRequestAds: Boolean
-        get() = if (isDebugMode) {
-            true
-        } else {
-            consentInformation.canRequestAds()
-        }
+        get() = consentInformation.canRequestAds()
 
 
     private val debugSettings = ConsentDebugSettings.Builder(context)
